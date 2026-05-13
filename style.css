@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1a1a2e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: 8px;
+  color: #4ecca3;
+  text-shadow: 0 0 20px #4ecca3;
+}
+
+/* ── Scoreboard ── */
+#scoreboard {
+  display: flex;
+  gap: 30px;
+}
+
+.score-box {
+  background: #16213e;
+  border: 2px solid #4ecca3;
+  border-radius: 10px;
+  padding: 10px 30px;
+  text-align: center;
+  min-width: 110px;
+}
+
+.label {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 4px;
+  color: #4ecca3;
+  margin-bottom: 4px;
+}
+
+.value {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* ── Canvas ── */
+#gameCanvas {
+  border: 3px solid #4ecca3;
+  border-radius: 8px;
+  box-shadow: 0 0 30px rgba(78, 204, 163, 0.4);
+  background: #0f3460;
+  display: block;
+}
+
+/* ── Overlay message (Game Over / Start) ── */
+#message {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  background: rgba(15, 52, 96, 0.95);
+  border: 2px solid #4ecca3;
+  border-radius: 14px;
+  padding: 40px 60px;
+  text-align: center;
+  box-shadow: 0 0 40px rgba(78, 204, 163, 0.5);
+}
+
+#message.hidden {
+  display: none;
+}
+
+#messageText {
+  font-size: 2rem;
+  color: #e94560;
+  text-shadow: 0 0 10px #e94560;
+  letter-spacing: 4px;
+}
+
+#finalScore {
+  font-size: 1.1rem;
+  color: #4ecca3;
+}
+
+#restartBtn {
+  margin-top: 8px;
+  padding: 12px 36px;
+  font-size: 1rem;
+  letter-spacing: 3px;
+  background: #4ecca3;
+  color: #1a1a2e;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+#restartBtn:hover {
+  background: white;
+  box-shadow: 0 0 16px #4ecca3;
+  transform: scale(1.05);
+}
+
+/* ── Controls hint ── */
+#controls {
+  text-align: center;
+  color: #888;
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
+
+#controls strong {
+  color: #4ecca3;
+}
